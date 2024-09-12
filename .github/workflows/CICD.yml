@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:                    # Global permissions configuration starts here
-  contents: read                # 'read' access to repository contents
+  contents: write                # 'read' access to repository contents
   pull-requests: write          # 'write' access to pull requests
 jobs:
   build:
