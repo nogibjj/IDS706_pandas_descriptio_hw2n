@@ -1,0 +1,6 @@
+black
+pytest
+pylint
+pandas
+matplotlib
+fpdf
