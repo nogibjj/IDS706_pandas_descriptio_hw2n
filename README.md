@@ -1,5 +1,5 @@
 # IDS706_pandas_description_hw2
-![CI](https://github.com/nogibjj/IDS706_pandas_description/actions/workflows/CI.yml/badge.svg)
+![CI](https://github.com/nogibjj/IDS706_pandas_description_hw2/actions/workflows/CICD.yml/badge.svg)
 
 ## Requirements
 * Python script using Polars for descriptive statistics
