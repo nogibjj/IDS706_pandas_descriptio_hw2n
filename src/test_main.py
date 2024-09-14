@@ -11,11 +11,6 @@ def test_stat():
     statistics(df)
 
 
-def test_pdf_gen():
-    generate_pdf(df, "NBA_2021_Report.pdf")
-    assert _file_exists_and_not_empty("NBA_2021_Report.pdf")
-
-
 def test_hist():
     try:
         visualization(df, "PTS", "pts_histogram.png")
@@ -29,3 +24,8 @@ def test_hist():
     assert _file_exists_and_not_empty("pts_histogram.png")
     assert _file_exists_and_not_empty("ast_histogram.png")
     assert _file_exists_and_not_empty("blk_histogram.png")
+    
+    
+def test_pdf_gen():
+    generate_pdf(df, "NBA_2021_Report.pdf")
+    assert _file_exists_and_not_empty("NBA_2021_Report.pdf")
