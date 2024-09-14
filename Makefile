@@ -8,7 +8,7 @@ format:
 	black src --line-length 100 --diff
 
 lint:
-	ruff check src/ --fix --line-length 100 --show-files
+	ruff check src/ --fix --verbose
 
 test:
 	python -m pytest -vv src/
