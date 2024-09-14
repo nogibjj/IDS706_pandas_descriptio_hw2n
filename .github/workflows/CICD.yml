@@ -17,9 +17,9 @@ jobs:
       with:
         persist-credentials: false
         fetch-depth: 0
-    - name: Setup
+    - name: Install
       run: |
-        make setup
+        make install
     - name: Format
       run: |
         make format

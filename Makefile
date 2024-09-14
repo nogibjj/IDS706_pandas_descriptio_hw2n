@@ -1,24 +1,21 @@
-VENV := ids706
+all: install format lint test
 
-all: setup format lint test
+install:
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
 
-setup:
-	rm -rf $(VENV)
-	python3 -m venv $(VENV)
-	$(VENV)/bin/pip install -r requirements.txt
+format:	
+	black src --line-length 100 --check --diff
 
 lint:
-	$(VENV)/bin/pylint src/ --ignore-patterns=test_.*?py
-
-format:
-	$(VENV)/bin/black src/
+	ruff check src/ --fix --line-length 100 --show-files
 
 test:
-	$(VENV)/bin/pytest -v src/
+	python -m pytest -vv src/
 	rm -rf *.png *.pdf
 
 run:
-	$(VENV)/bin/python src/main.py
+	python src/main.py
 
 deploy:
 	git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
