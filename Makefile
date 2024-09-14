@@ -5,7 +5,7 @@ install:
 		pip install -r requirements.txt
 
 format:	
-	black src --line-length 100 --diff
+	black src --line-length 100 --verbose
 
 lint:
 	ruff check src/ --fix --verbose
